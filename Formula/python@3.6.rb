@@ -79,7 +79,7 @@ class PythonAT36 < Formula
       --enable-loadable-sqlite-extensions
       --without-ensurepip
       --with-dtrace
-      --host=aarch-apple-darwin
+      --host=aarch64-apple-darwin
     ]
 
     args << "--without-gcc" if ENV.compiler == :clang
