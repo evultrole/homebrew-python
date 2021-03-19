@@ -80,7 +80,7 @@ class PythonAT36 < Formula
       --without-ensurepip
       --with-dtrace
       --host=aarch64-apple-darwin
-      --build-aarch64-apple-darwin
+      --build=aarch64-apple-darwin
     ]
 
     args << "--without-gcc" if ENV.compiler == :clang
