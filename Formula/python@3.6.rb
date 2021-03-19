@@ -5,12 +5,6 @@ class PythonAT36 < Formula
   sha256 "a47a43a53abb42286a2c11965343ff56711b9e64e8d11bf2c6701a4fb8ce1a0f"
   revision 1
 
-  bottle do
-   root_url "https://github.com/evultrole/homebrew-python/releases/download/python@3.6-3.6.13"
-    sha256 catalina: "5c09ac2b3105a674c1e3f9ea0289134f932f26b152e6713cd233fca2032f5fcb"
-  end
-
-
   option "with-tcl-tk", "Use Homebrew's Tk instead of macOS Tk (has optional Cocoa and threads support)"
   deprecated_option "with-brewed-tk" => "with-tcl-tk"
 
