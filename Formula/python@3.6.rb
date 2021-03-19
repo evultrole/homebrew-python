@@ -30,6 +30,9 @@ class PythonAT36 < Formula
   keg_only :versioned_formula
 
   depends_on "pkg-config" => :build
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
   depends_on "gdbm"
   depends_on "openssl@1.1"
   depends_on "readline"
@@ -128,7 +131,6 @@ class PythonAT36 < Formula
     args << "LDFLAGS=#{ldflags.join(" ")}" unless ldflags.empty?
     args << "CPPFLAGS=#{cppflags.join(" ")}" unless cppflags.empty?
 
-    system "autoreconf"
     system "./configure", *args
     system "make"
 
