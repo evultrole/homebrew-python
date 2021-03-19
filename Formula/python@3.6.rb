@@ -137,8 +137,9 @@ class PythonAT36 < Formula
     system "make"
 
       # Tell Python not to install into /Applications (default for framework builds)
-      system "make", "altinstall", "PYTHONAPPSDIR=#{prefix}"
       system "make", "frameworkinstallextras", "PYTHONAPPSDIR=#{pkgshare}"
+
+      system "make", "altinstall", "PYTHONAPPSDIR=#{prefix}"
 
     # Any .app get a " 3" attached, so it does not conflict with python 2.x.
     Dir.glob("#{prefix}/*.app") { |app| mv app, app.sub(/\.app$/, " 3.6.app") }
