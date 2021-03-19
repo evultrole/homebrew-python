@@ -166,18 +166,6 @@ class PythonAT36 < Formula
       (libexec/r).install resource(r)
     end
 
-    cd "Doc" do
-      if build.head?
-        system bin/"python3", "-m", "venv", "./venv"
-        resource("blurb").stage do
-          system buildpath/"Doc/venv/bin/python3", "-m", "pip", "install", "-v",
-                 "--no-deps", "--no-binary", ":all", "--ignore-installed", "."
-        end
-      end
-
-      system "make", "html"
-      doc.install Dir["build/html/*"]
-    end
 
     # Install unversioned symlinks in libexec/bin.
     {
