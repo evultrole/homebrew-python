@@ -128,7 +128,7 @@ class PythonAT36 < Formula
     args << "LDFLAGS=#{ldflags.join(" ")}" unless ldflags.empty?
     args << "CPPFLAGS=#{cppflags.join(" ")}" unless cppflags.empty?
 
-    system "./configure", *args
+    system "autoreconf", *args
     system "make"
 
     ENV.deparallelize do
