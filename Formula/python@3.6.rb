@@ -79,8 +79,6 @@ class PythonAT36 < Formula
       --enable-loadable-sqlite-extensions
       --without-ensurepip
       --with-dtrace
-      -Wno-error 
-      -Wno-implicit-function-declaration
     ]
 
     args << "--without-gcc" if ENV.compiler == :clang
