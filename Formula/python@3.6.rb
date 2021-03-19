@@ -41,7 +41,7 @@ class PythonAT36 < Formula
 
   patch do
     url "https://raw.githubusercontent.com/evultrole/aarch64-apple-gimp/main/fixes/python36.patch"
-    sha256 "fa4465c20654262fd6c304160e6701a813eaabd5ea9b2a8a836434d5e5bf7b79"
+    sha256 "620adeac59f2e6ace82d4ca9a9fbe617319801b4c123cf4af9d5a097ee6a3846"
   end
 
   skip_clean "bin/pip3", "bin/pip-3.4", "bin/pip-3.5", "bin/pip-3.6"
